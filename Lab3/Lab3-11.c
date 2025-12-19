@@ -3,26 +3,21 @@
 
 int main()
 { 
-    int tam = 5;
     int i;
     int vet[5];
 
     printf("Insira os 5 numeros do vetor:\n");
 
-    for (i = 0; i < tam; i++)
+    for (i = 0; i < 5; i++)
     {
-        scanf("%d", vet + i);
+        scanf("%d", &vet[i]);
     }
 
     for (i = 0; i < 5; i++)
     {
-        if((vet + i)%2 = 0)
+        if(vet[i] % 2 == 0)
         {
-            printf("%d\n", (vet + i));
-        }
-        else
-        {
-            printf("o endereco de memoria nao eh par\n");
+            printf("os enderecos pares de vet[%d]:  %p\n",i, (void*)&vet[i]);
         }
     }
 
